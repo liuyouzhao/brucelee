@@ -1,0 +1,9 @@
+## chip&version configs
+#CONFIG_CHIP_COMPILE_PREFIX="xtensa-lx106-elf-"
+CONFIG_CHIP_COMPILE_PREFIX=""
+CONFIG_CHIP_VERSION="linux-x86"
+
+
+## bru configs
+CONFIG_BRU_CORE=y
+CONFIG_BRU_LIBNETUTILS=y
