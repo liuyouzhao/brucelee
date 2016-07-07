@@ -71,7 +71,7 @@ void GetHost(char * src, char * web, char * file, int * port)  {
  *Note: 任何人可以任意复制代码并运用这些代码，当然包括你的商业用途
  *                         但请遵循GPL
  *********************************************************************/
-int main(int argc, char *argv[])
+int http_get(int argc, char *argv[])
 {
     int sockfd;
     char buffer[1024];
