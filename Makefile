@@ -117,6 +117,7 @@ BRU_LIBS_L = $(foreach L, $(BRU_LIBS), -l$(L:lib%.a=%))
 BIN:
 	$(warning "libs:"$(BRU_LIBS_L))
 	$(shell $(CC) -o $(BRU_OUT_PATH)/$(BRU_OUT_BIN) -L$(BRU_OUT_PATH_LIB) $(BRU_LIBS_L))
+	$(warning Binary: $(BRU_OUT_PATH)/$(BRU_OUT_BIN) build successfully!)
 #########################################################################################
 
 all: BRU BIN
