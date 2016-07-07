@@ -23,7 +23,7 @@ BRU_OUT_BIN=		bru
 #CFLAGS = -mtune=arm966e-s -march=armv5te -mfloat-abi=soft -fno-builtin
 #CFLAGS = -mfloat-abi=soft -fno-builtin
 CFLAGS += -c
-CFLAGS += -Os
+CFLAGS += -Os -ggdb
 # AR flags
 LDFLAGS = -r
 #########################################################################################
@@ -94,6 +94,10 @@ endif
 ifeq ($(CONFIG_BRU_CORE), y)
     BRU_SUBDIRS +=  $(BRU_BASE_PATH)/core
 endif
+
+ifeq ($(CONFIG_BRU_NET), y)
+    BRU_SUBDIRS +=  $(BRU_BASE_PATH)/net
+endif
 ######################################################################
 
 
@@ -120,5 +124,5 @@ all: BRU BIN
 ## just for cleaning
 .PHONY:clean
 clean:
-	$(foreach S, $(BRU_SUBDIRS), $(warning cleaning: $(S)) $(shell find $(S) -type f -name "*\.o"|xargs rm) $(eval include $(S)/Makefile ) $(shell rm $(S)/$(TARGET)))
+	$(foreach S, $(BRU_SUBDIRS), $(warning cleaning: $(S)) $(shell find $(S) -type f -name "*\.o"|xargs rm -f ) $(eval include $(S)/Makefile ) $(shell rm $(S)/$(TARGET)))
 	$(shell rm -r $(BRU_OUT_PATH))
