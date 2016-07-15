@@ -98,6 +98,10 @@ endif
 ifeq ($(CONFIG_BRU_NET), y)
     BRU_SUBDIRS +=  $(BRU_BASE_PATH)/net
 endif
+
+ifeq ($(CONFIG_BRU_CLIENT), y)
+    BRU_SUBDIRS +=  $(BRU_BASE_PATH)/client
+endif
 ######################################################################
 
 
