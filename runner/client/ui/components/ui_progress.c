@@ -14,6 +14,7 @@ typedef struct
     unsigned int _cur_pro;
     unsigned int _max_pro;
 
+    unsigned int _type;
 } ui_progress;
 
 
@@ -25,6 +26,7 @@ int ui_progress_init(ui_progress **uipro)
     *uipro = (ui_progress*) malloc(sizeof(ui_progress));
     memset(*uipro->_max_pro, 0, sizeof(ui_progress));
     *uipro->_max_pro = UI_PROGRESS_DEFAULT_CAPACITY;
+    *uipro->_type = UI_TYPE_PROGRESS;
 
     return RT_OK;
 }

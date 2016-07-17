@@ -1,5 +1,8 @@
 #include <defs.h>
 
+#define UI_TYPE_PROGRESS 0x0001
+
+
 int ui_set_layout(void* ui, void* l)
 {
     *((layout**)ui) = l;

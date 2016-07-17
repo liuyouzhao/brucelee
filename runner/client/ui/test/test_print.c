@@ -40,9 +40,7 @@ void screen_clear()
 
 void screen_gotoxy(int x, int y)
 {
-
     printf("\033[%d;%dH", y, x);
-
 }
 
 

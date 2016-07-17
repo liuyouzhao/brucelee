@@ -110,4 +110,7 @@ int render_progress(screen *s, ui_progress *ui, paint *pt)
 {
     uint8_t *canvas = s->buf;
     layout *l = ui->_layout;
+
+
+    
 }
